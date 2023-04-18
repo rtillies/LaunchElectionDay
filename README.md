@@ -32,7 +32,7 @@ Console.WriteLine(diana.Votes);
 => 0
 ```
 
-## Iteration 2 (Try to complete through this iteration!)
+## Iteration 2 (Your goal is to complete through this iteration!)
 
 Create a `Race` class that responds to the following interaction pattern.
 
@@ -54,7 +54,7 @@ race.Candidates
 => [#<Candidate:0x00007f9edf376c90...>]
 ```
 
-## Iteration 3 (Hungry for more exercise, not expected you'll get here)
+## Iteration 3 (Hungry for more exercise, it's not expected you'll get here)
 
 Create an `Election` class that satisfies the following requirements.
 
@@ -70,7 +70,7 @@ You have been contacted by the local government to create a program that helps t
 | GetVoteCounts | A dictionary with each candidate's name as a key and their count of votes as the value. |
 
 
-## Iteration 4 (very hungry for more exercise, not expected you'll get here)
+## Iteration 4 (A very hungry for more exercise, it's not expected you'll get here)
 
 Add the following methods on the `Race` class. You may need to add additional property(s) to implement this functionality.
 

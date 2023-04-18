@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using LaunchElectionDay;
+﻿using LaunchElectionDay;
 
 //var diana = new Candidate("Diana D", "Democrat");
 
