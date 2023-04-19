@@ -86,5 +86,57 @@ namespace LaunchElectionDay.UnitTests
             Assert.Equal(expected, election.GetAllCandidates());
         }
 
+        [Fact]
+        public void Election_GetVoteCounts_ReturnsDictionaryOfCandidateNamesAndVotes()
+        {
+            var election = new Election("2023");
+            var cityCouncil = new Race("City Council District 10");
+            var mayor = new Race("Raleigh Mayoral Race");
+
+            var diana = new Candidate("Diana D", "Democrat");
+            diana.VoteFor();
+            diana.VoteFor();
+            diana.VoteFor();
+
+            var camilla = new Candidate("Camilla B", "Libertarian");
+            camilla.VoteFor();
+            camilla.VoteFor();
+            camilla.VoteFor();
+            camilla.VoteFor();
+
+            var barack = new Candidate("Barack O", "Democrat");
+            barack.VoteFor();
+            barack.VoteFor();
+            barack.VoteFor();
+            barack.VoteFor();
+            barack.VoteFor();
+
+            var bernie = new Candidate("Bernie S", "Independent");
+            bernie.VoteFor();
+            bernie.VoteFor();
+            bernie.VoteFor();
+            bernie.VoteFor();
+            bernie.VoteFor();
+            bernie.VoteFor();
+
+            cityCouncil.RegisterCandidate(diana);
+            cityCouncil.RegisterCandidate(camilla);
+
+            mayor.RegisterCandidate(barack);
+            mayor.RegisterCandidate(bernie);
+
+            election.AddRace(cityCouncil);
+            election.AddRace(mayor);
+
+            var expected = new Dictionary<string, int>
+            {
+                { "Diana D", 3 },
+                { "Camilla B", 4 },
+                { "Barack O", 5 },
+                { "Bernie S", 6 }
+            };
+
+            Assert.Equal(expected, election.GetVoteCounts());
+        }
     }
 }
