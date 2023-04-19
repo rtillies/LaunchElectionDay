@@ -7,8 +7,8 @@ Console.WriteLine(diana.Name);
 Console.WriteLine(diana.Party);
 Console.WriteLine(diana.Votes);
 
-//diana.VoteFor();
-//diana.VoteFor();
-//diana.VoteFor();
+diana.VoteFor();
+diana.VoteFor();
+diana.VoteFor();
 
-//Console.WriteLine(diana.Votes);
+Console.WriteLine(diana.Votes);
