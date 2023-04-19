@@ -27,5 +27,10 @@ namespace LaunchElectionDay
         {
             return Races;
         }
+
+        public void AddRace(Race race)
+        {
+            Races.Add(race);
+        }
     }
 }

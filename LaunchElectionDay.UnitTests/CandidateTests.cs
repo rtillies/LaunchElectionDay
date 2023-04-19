@@ -47,5 +47,14 @@ namespace LaunchElectionDay.UnitTests
             Assert.Empty(election.GetRaces());
         }
 
+        [Fact]
+        public void Election_AddRace_AddsToRaceList()
+        {
+            var election = new Election("2023");
+            var race = new Race("City Council District 10");
+            election.AddRace(race);
+            Assert.Equal(race, election.GetRaces().Last());
+        }
+
     }
 }
