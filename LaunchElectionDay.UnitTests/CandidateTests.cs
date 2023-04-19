@@ -44,7 +44,7 @@ namespace LaunchElectionDay.UnitTests
         {
             var election = new Election("2023");
             Assert.Equal("2023", election.GetYear());
-            Assert.Empty(election.Races);
+            Assert.Empty(election.GetRaces());
         }
 
     }

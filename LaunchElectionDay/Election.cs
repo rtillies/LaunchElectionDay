@@ -10,7 +10,7 @@ namespace LaunchElectionDay
     public class Election
     {
         private string Year { get; }
-        public List<Race> Races;
+        private List<Race> Races { get; set; }
 
         public Election(string year)
         {
@@ -23,5 +23,9 @@ namespace LaunchElectionDay
             return Year;
         }
 
+        public List<Race> GetRaces()
+        {
+            return Races;
+        }
     }
 }
