@@ -29,6 +29,7 @@ namespace LaunchElectionDay.UnitTests
             var race = new Race("City Council District 10");
             Assert.Equal("City Council District 10", race.Office);
             Assert.Empty(race.Candidates);
+            Assert.True(race.isOpen);
         }
 
         [Fact]
