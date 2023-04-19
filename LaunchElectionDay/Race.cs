@@ -16,5 +16,10 @@ namespace LaunchElectionDay
             Office = office;
             Candidates = new List<Candidate>();
         }
+
+        public void RegisterCandidate(Candidate candid)
+        {
+            Candidates.Add(candid);
+        }
     }
 }

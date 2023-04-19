@@ -28,5 +28,15 @@ namespace LaunchElectionDay.UnitTests
             Assert.Equal("City Council District 10", race.Office);
             Assert.Empty(race.Candidates);
         }
+
+        [Fact]
+        public void Race_RegisterCandidate_AddCandidateToList()
+        {
+            var race = new Race("City Council District 10");
+            var diana = new Candidate("Diana D", "Democrat");
+            race.RegisterCandidate(diana);
+
+            Assert.Equal(diana, race.Candidates[0]);
+        }
     }
 }
