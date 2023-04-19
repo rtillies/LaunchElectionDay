@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/LaunchElectionDay/v17/.suo
+/LaunchElectionDay.UnitTests/obj/Debug/net6.0/LaunchElectionDay.UnitTests.csproj.AssemblyReference.cache
