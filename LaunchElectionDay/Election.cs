@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace LaunchElectionDay
 {
     public class Election
     {
-        public string Year;
+        private string Year { get; }
         public List<Race> Races;
 
         public Election(string year)
@@ -16,5 +17,11 @@ namespace LaunchElectionDay
             Year = year;
             Races = new List<Race>();
         }
+
+        public string GetYear()
+        {
+            return Year;
+        }
+
     }
 }

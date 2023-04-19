@@ -43,7 +43,7 @@ namespace LaunchElectionDay.UnitTests
         public void Election_Constructor_SetsProperties()
         {
             var election = new Election("2023");
-            Assert.Equal("2023", election.Year);
+            Assert.Equal("2023", election.GetYear());
             Assert.Empty(election.Races);
         }
 
