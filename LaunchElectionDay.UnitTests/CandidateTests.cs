@@ -29,7 +29,7 @@ namespace LaunchElectionDay.UnitTests
             var race = new Race("City Council District 10");
             Assert.Equal("City Council District 10", race.Office);
             Assert.Empty(race.Candidates);
-            Assert.True(race.isOpen);
+            Assert.True(race.IsOpen);
         }
 
         [Fact]
@@ -139,5 +139,14 @@ namespace LaunchElectionDay.UnitTests
 
             Assert.Equal(expected, election.GetVoteCounts());
         }
+
+        [Fact]
+        public void Race_Close_ChangesOpenRaceToClosed()
+        {
+            var race = new Race("City Council District 10");
+            race.Close();
+            Assert.False(race.IsOpen);
+        }
+
     }
 }

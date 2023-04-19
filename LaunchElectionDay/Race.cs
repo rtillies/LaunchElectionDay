@@ -10,18 +10,23 @@ namespace LaunchElectionDay
     {
         public string Office;
         public List<Candidate> Candidates;
-        public bool isOpen;
+        public bool IsOpen;
 
         public Race(string office)
         {
             Office = office;
             Candidates = new List<Candidate>();
-            isOpen = true;
+            IsOpen = true;
         }
 
         public void RegisterCandidate(Candidate candid)
         {
             Candidates.Add(candid);
+        }
+
+        public void Close()
+        {
+            IsOpen = false;
         }
     }
 }
