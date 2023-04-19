@@ -38,5 +38,14 @@ namespace LaunchElectionDay.UnitTests
 
             Assert.Equal(diana, race.Candidates[0]);
         }
+
+        [Fact]
+        public void Election_Constructor_SetsProperties()
+        {
+            var election = new Election("2023");
+            Assert.Equal("2023", election.Year);
+            Assert.Empty(election.Races);
+        }
+
     }
 }
