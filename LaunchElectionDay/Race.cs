@@ -28,5 +28,24 @@ namespace LaunchElectionDay
         {
             IsOpen = false;
         }
+
+        public bool IsTie()
+        {
+            //bool tie = false;
+            int mostVotes = -1;
+
+            foreach(var c in Candidates)
+            {
+                if(c.Votes > mostVotes)
+                {
+                    mostVotes = c.Votes;
+                }
+                else if(c.Votes == mostVotes)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

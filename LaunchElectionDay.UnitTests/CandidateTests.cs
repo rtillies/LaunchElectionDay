@@ -148,5 +148,34 @@ namespace LaunchElectionDay.UnitTests
             Assert.False(race.IsOpen);
         }
 
+        [Fact]
+        public void Race_IsTie_ReturnsIfTwoCandidatesHaveEqualVotes()
+        {
+            var election = new Election("2023");
+            var cityCouncil = new Race("City Council District 10");
+
+            var diana = new Candidate("Diana D", "Democrat");
+            diana.VoteFor();
+            diana.VoteFor();
+            diana.VoteFor();
+
+            var camilla = new Candidate("Camilla B", "Libertarian");
+            camilla.VoteFor();
+            camilla.VoteFor();
+            camilla.VoteFor();
+            camilla.VoteFor();
+
+            cityCouncil.RegisterCandidate(diana);
+            cityCouncil.RegisterCandidate(camilla);
+
+            Assert.False(cityCouncil.IsTie());
+            // 3 Votes for Diana, 4 Votes for Camilla
+
+            diana.VoteFor();
+            Assert.True(cityCouncil.IsTie());
+            // 4 Votes for Diana, 4 Votes for Camilla
+        }
+
+
     }
 }
