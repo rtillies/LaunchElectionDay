@@ -4,7 +4,7 @@
 
 * Fork this Repository
 * Clone YOUR fork
-* Compete as many itarations as time allows
+* Compete as many iterations as time allows
 * Push your solution to your fork
 * Send a link to your fork to your instructors (this is not graded, but we want to see how far folks got)
 
