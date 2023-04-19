@@ -20,5 +20,13 @@ namespace LaunchElectionDay.UnitTests
             diana.VoteFor();
             Assert.Equal(3, diana.Votes);
         }
+
+        [Fact]
+        public void Race_Constructor_SetsProperties()
+        {
+            var race = new Race("City Council District 10");
+            Assert.Equal("City Council District 10", race.Office);
+            Assert.Empty(race.Candidates);
+        }
     }
 }
