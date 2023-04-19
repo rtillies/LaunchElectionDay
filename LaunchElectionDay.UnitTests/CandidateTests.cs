@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace LaunchElectionDay.UnitTests
 {
     public class CandidateTests
@@ -54,6 +56,34 @@ namespace LaunchElectionDay.UnitTests
             var race = new Race("City Council District 10");
             election.AddRace(race);
             Assert.Equal(race, election.GetRaces().Last());
+        }
+
+        [Fact]
+        public void Election_GetAllCandidates_ReturnsAllCandidatesInAllRaces()
+        {
+            var election = new Election("2023");
+            var cityCouncil = new Race("City Council District 10");
+            var mayor = new Race("Raleigh Mayoral Race");
+
+            var diana = new Candidate("Diana D", "Democrat");
+            var camilla = new Candidate("Camilla B", "Libertarian");
+
+            var barack = new Candidate("Barack O", "Democrat");
+            var bernie = new Candidate("Bernie S", "Independent");
+
+            cityCouncil.RegisterCandidate(diana);
+            cityCouncil.RegisterCandidate(camilla);
+
+            mayor.RegisterCandidate(barack);
+            mayor.RegisterCandidate(bernie);
+
+            election.AddRace(cityCouncil);
+            election.AddRace(mayor);
+
+            var expected = new List<Candidate>
+            { diana, camilla, barack, bernie };
+
+            Assert.Equal(expected, election.GetAllCandidates());
         }
 
     }

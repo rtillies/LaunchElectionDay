@@ -32,5 +32,15 @@ namespace LaunchElectionDay
         {
             Races.Add(race);
         }
+
+        public List<Candidate> GetAllCandidates()
+        {
+            var allCandidates = new List<Candidate>();
+            foreach(var race in Races)
+            {
+                allCandidates.AddRange(race.Candidates);
+            }
+            return allCandidates;
+        }
     }
 }
