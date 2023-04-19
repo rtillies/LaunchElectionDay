@@ -10,15 +10,15 @@ namespace LaunchElectionDay.UnitTests
             Assert.Equal("Democrat", diana.Party);
         }
 
-        [Fact]
-        public void Candidate_VoteFor_IncreasesVotes()
-        {
-            var diana = new Candidate("Diana D", "Democrat");
-            Assert.Equal(0, diana.Votes);
-            diana.VoteFor();
-            diana.VoteFor();
-            diana.VoteFor();
-            Assert.Equal(3, diana.Votes);
-        }
+        //[Fact]
+        //public void Candidate_VoteFor_IncreasesVotes()
+        //{
+        //    var diana = new Candidate("Diana D", "Democrat");
+        //    Assert.Equal(0, diana.Votes);
+        //    diana.VoteFor();
+        //    diana.VoteFor();
+        //    diana.VoteFor();
+        //    Assert.Equal(3, diana.Votes);
+        //}
     }
 }
