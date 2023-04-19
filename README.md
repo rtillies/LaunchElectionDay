@@ -22,7 +22,7 @@ Console.WriteLine(diana.Party);
 => "Democrat"
 
 Console.WriteLine(diana.Votes);
-=> 0
+=> 3
 
 diana.VoteFor();
 diana.VoteFor();
