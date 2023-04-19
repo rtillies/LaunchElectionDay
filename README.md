@@ -29,7 +29,7 @@ diana.VoteFor();
 diana.VoteFor();
 
 Console.WriteLine(diana.Votes);
-=> 0
+=> 3
 ```
 
 ## Iteration 2 (Your goal is to complete through this iteration!)
@@ -64,9 +64,9 @@ You have been contacted by the local government to create a program that helps t
 | ----------- | ------------ |
 | new (the constructor)         | An `Election` object that has an attribute of year (string data type). |
 | GetYear        | The year of the election (string). |
-| GetRaces       | An array of `Race` objects. |
-| AddRace(race)   | An array of `Race` objects. |
-| GetAllCandidates  | An array of all `Candidate` objects in the election. |
+| GetRaces       | An list of `Race` objects. |
+| AddRace(race)   | An list of `Race` objects. |
+| GetAllCandidates  | An list of all `Candidate` objects in the election. |
 | GetVoteCounts | A dictionary with each candidate's name as a key and their count of votes as the value. |
 
 
