@@ -45,7 +45,7 @@ namespace LaunchElectionDay
 
         public Dictionary<string, int> GetVoteCounts()
         {
-            Dictionary<string, int> voteCounts = new Dictionary<string, int> { };
+            var voteCounts = new Dictionary<string, int>();
             List<Candidate> allCandidates = GetAllCandidates();
 
             foreach(var c in allCandidates)

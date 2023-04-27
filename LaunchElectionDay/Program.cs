@@ -7,7 +7,7 @@ int option = -1;
 
 while (option != 0) 
 {
-    option = MainMenu(thisElection);
+    option = MainMenu();
     processSelection(thisElection, option);
 }
 
@@ -63,8 +63,8 @@ static void CastRandomVotes(Election elect)
 {
     foreach(var candidate in elect.GetAllCandidates())
     {
-        Random rnd = new Random();
-        int num = rnd.Next(50);
+        var random = new Random();
+        int num = random.Next(50);
         for (int i = 0; i < num; i++)
         {
             candidate.VoteFor();
@@ -72,7 +72,7 @@ static void CastRandomVotes(Election elect)
     }
 }
 
-static int MainMenu(Election elect)
+static int MainMenu()
 {
     Console.WriteLine();
     Console.WriteLine("Main Menu");

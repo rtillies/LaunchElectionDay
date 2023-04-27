@@ -151,7 +151,6 @@ namespace LaunchElectionDay.UnitTests
         [Fact]
         public void Race_IsTie_ReturnsIfTwoCandidatesHaveEqualVotes()
         {
-            var election = new Election("2023");
             var cityCouncil = new Race("City Council District 10");
 
             var diana = new Candidate("Diana D", "Democrat");
