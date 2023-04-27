@@ -2,10 +2,10 @@
 using LaunchElectionDay;
 
 var thisElection = CreateElection();
-Console.WriteLine($"Welcome to Election {thisElection.GetYear()}!");
+Console.WriteLine($"Welcome to the {thisElection.GetYear()} Election!");
 int option = -1;
 
-while (option != 0)
+while (option != 0) 
 {
     option = MainMenu(thisElection);
     processSelection(thisElection, option);
@@ -16,7 +16,7 @@ static void displayCandidates(Race race)
     Console.WriteLine($"Candidate count: {race.Candidates.Count}");
     foreach (var c in race.Candidates)
     {
-        Console.WriteLine($"{c.Name}, {c.Party}, {c.Votes} votes");
+        Console.WriteLine($" {c.Name}, {c.Party}, {c.Votes} votes");
     }
 }
 
@@ -27,7 +27,7 @@ static void displayRaces(Election elect)
     foreach (var race in races)
     {
         var raceOpen = race.IsOpen ? "Open" : "Closed";
-        Console.WriteLine($"{race.Office}: {raceOpen}, Candidates: {race.Candidates.Count}");
+        Console.WriteLine($" {race.Office}: {raceOpen}, Candidates: {race.Candidates.Count}");
     }
 }
 
@@ -76,13 +76,14 @@ static int MainMenu(Election elect)
 {
     Console.WriteLine();
     Console.WriteLine("Main Menu");
-    Console.WriteLine("0 - Quit");
-    Console.WriteLine("1 - List All Races");
-    Console.WriteLine("2 - List All Candidates");
-    Console.WriteLine("3 - End Election");
-    Console.WriteLine("4 - Vote For Candidate");
+    Console.WriteLine(" 0 - Quit");
+    Console.WriteLine(" 1 - List All Races");
+    Console.WriteLine(" 2 - List All Candidates");
+    Console.WriteLine(" 3 - End Election");
+    Console.WriteLine(" 4 - Vote For Candidate");
+    Console.WriteLine(" 5 - Clear Screen");
 
-    Console.Write("Select an option 0-4: ");
+    Console.Write("Select an option 0-5: ");
     return Convert.ToInt32(Console.ReadLine());
 }
 
@@ -121,6 +122,10 @@ static void processSelection(Election elect, int option)
     else if (option == 4) // Vote for candidate
     {
         Console.WriteLine("This function is under construction.");
+    }
+    else if (option == 5) // Clear screen
+    {
+        Console.Clear();
     }
     else // Invalid entry
     {
