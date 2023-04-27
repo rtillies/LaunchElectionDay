@@ -81,9 +81,9 @@ static int MainMenu()
     Console.WriteLine(" 2 - List All Candidates");
     Console.WriteLine(" 3 - End Election");
     Console.WriteLine(" 4 - Vote For Candidate");
-    Console.WriteLine(" 5 - Clear Screen");
+    //Console.WriteLine(" 5 - Clear Screen");
 
-    Console.Write("Select an option 0-5: ");
+    Console.Write("Select an option 0-4: ");
     return Convert.ToInt32(Console.ReadLine());
 }
 
@@ -123,10 +123,10 @@ static void processSelection(Election elect, int option)
     {
         Console.WriteLine("This function is under construction.");
     }
-    else if (option == 5) // Clear screen
-    {
-        Console.Clear();
-    }
+    //else if (option == 5) // Clear screen
+    //{
+    //    Console.Clear();
+    //}
     else // Invalid entry
     {
         Console.WriteLine("Invalid entry, please try again.");
